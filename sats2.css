@@ -7,10 +7,10 @@
 
  /* Ne pas retirer */
  & > br,
- input[name*="tab"] {display: none;}
+ input[name*="sujet-tab"] {display: none;}
 
  /* Onglet */
- label[for*="tab"] {
+ label[for*="sujet-tab"] {
    grid-row: 1;
    display: block;
    text-transform: uppercase;
@@ -24,12 +24,12 @@
  }
 
  /* Onglet au survol */
- label[for*="tab"]:hover {
+ label[for*="sujet-tab"]:hover {
    color: var(--contrast);
  }
 
  /* Onglet actif */
- input[name*="tab"]:checked + label[for*="tab"] {
+ input[name*="sujet-tab"]:checked + label[for*="sujet-tab"] {
    background: var(--neutralDark);
    border-radius: 5px;
    color: var(--contrast);
@@ -37,7 +37,7 @@
  }
 
   /* Contenu d'un onglet */
- .tab-content {
+ .sujet-tab-content {
    grid-row: 2;
    grid-column: 1 / -1;
    z-index: 1;
@@ -49,7 +49,7 @@
  }
 
  /* Contenu d'un onglet actif */
- input[name*="tab"]:checked + label + .tab-content {
+ input[name*="sujet-tab"]:checked + label + .sujet-tab-content {
   z-index: 2;
   opacity: 1;
   transition: all 0.35s;
