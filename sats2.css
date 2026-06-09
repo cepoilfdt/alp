@@ -1,0 +1,204 @@
+.sujet-tabs {
+ display: grid;
+ grid-template-rows: repeat(2, max-content);
+ grid-template-columns: repeat(30, minmax(min-content, auto));
+ gap: 5px;
+ margin: 0 auto;
+
+ /* Ne pas retirer */
+ & > br,
+ input[name*="tab"] {display: none;}
+
+ /* Onglet */
+ label[for*="tab"] {
+   grid-row: 1;
+   display: block;
+   text-transform: uppercase;
+   color: var(--contrastLighter);
+   font-size: 12px;
+   padding: 2px 10px;
+   text-wrap: nowrap;
+   cursor: pointer;
+   top: 0;
+   transition: all 0.25s;
+ }
+
+ /* Onglet au survol */
+ label[for*="tab"]:hover {
+   color: var(--contrast);
+ }
+
+ /* Onglet actif */
+ input[name*="tab"]:checked + label[for*="tab"] {
+   background: var(--neutralDark);
+   border-radius: 5px;
+   color: var(--contrast);
+   transition: all 0.35s;
+ }
+
+  /* Contenu d'un onglet */
+ .tab-content {
+   grid-row: 2;
+   grid-column: 1 / -1;
+   z-index: 1;
+   opacity: 0;
+   transition: all 0.35s;
+   background: var(--neutralDark);
+   border-radius: 5px;
+   padding: 5px 10px;
+ }
+
+ /* Contenu d'un onglet actif */
+ input[name*="tab"]:checked + label + .tab-content {
+  z-index: 2;
+  opacity: 1;
+  transition: all 0.35s;
+ }
+}
+
+/* Conteneur de tous les messages d'un sujet */
+/* Cette class est ajouté par le script que si le sujet contient un élément <buton onglet=""> */
+.page-tab {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    /* transforme la structure du post en deux colonnes, la première pour les boutons, la deuxième pour les onglets */
+    gap: 10px;
+    margin-top: 10px;
+
+
+    /* Supprime tous les éléments superflus comme les profils, la date, certains boutons d'édition...*/
+    .post_profile,
+    .post_date,
+    .like_button,
+    .btn-quote,
+    li:has(.fa-mention),
+    .btn-ip, .signature_div, .fa_like_list {
+        display: none;
+    }
+}
+
+
+/* Modification du message qui contient les boutons */
+.page-tab .post:has(button[onglet]) {background-color:transparent!important;
+border:none!important;
+    display: block;
+    grid-row: 1;
+    grid-column: 1;
+    /* Positionne le post dans la première colonne */
+    width: 290px;
+	text-align:left;
+	align-items: start;
+margin-left:-20px;
+    /* Largeur du sujet */
+}
+
+.ongletssujet{border-left:solid 1px var(--contour);
+padding-left:10px;}
+
+/* Bouton d'onglet */
+button[onglet] {
+    background-color: transparent;
+    margin-bottom: 5px;
+	font-family:'Poppins', sans serif;
+	font-size:10px;
+	text-transform:uppercase;
+	letter-spacing:1px;
+	border-bottom:solid 2px #D6D3B4;
+	padding: 4px 7px;
+}
+
+
+/* Bouton d'onglet cliqué */
+button[onglet].active {
+    background-color: var(--grisfonce);
+	font-weight:600;
+}
+
+
+/* Modification du message qui contient les onglets */
+.page-tab .post:has(div[onglet]) {
+    grid-row: 1;
+    grid-column: 2;
+    /* Positionne le post dans la deuxième colonne */
+    display: none;
+    /* Masque l'onglet par défaut */
+}
+
+
+/* Message en onglet qui est ouvert */
+.page-tab .post:has(div[onglet]).active {
+    display: block;
+}
+
+
+/* Masque les boutons d'édition lorsque l'option cochée */
+.page-tab.clear .post_details {
+    display: none;
+}
+
+
+.moodboard img{width:100px;
+height:100px;
+object-fit:cover;
+border-radius:4px;
+margin:3px;}
+
+.moodboard img:hover{}
+
+.moodboard{width:450px;
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+padding:10px;}
+
+
+
+/**-------carnet de bord---*/
+.imgcarnet{width:140px;height:200px;object-fit:cover;}
+
+psd2, s2, s2 a{font-size: 14px;
+    letter-spacing: 1px;
+    font-family: 'Poppins', sans serif;
+    text-transform: lowercase;
+    color: #BE8E6B;
+    font-weight: 600;
+    border-bottom: solid 3px #BE8E6B;
+    padding-bottom: 0px;
+	margin-bottom:2px;
+	font-style:none!important;}
+
+.fichegrid{display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 1px;
+  align-content:justify;
+  text-align:justify;
+  padding:10px;
+  max-height:250px;
+  overflow-y:auto;
+  overflow-x:hidden;}
+
+.grid1{border-right: 1px solid #D1D1D1;
+padding-right:10px;}
+
+.grid2{padding-left:10px;}
+
+.ccontact{}
+
+.fichegrid2{display: grid;
+  grid-template-columns: 40px auto;
+  grid-gap: 5px;
+  text-align:justify;
+  align-items: start;
+  width:500px;}
+
+.lieux{height:110px;
+overflow:auto;}
+
+.faic:hover{color:#DABF94;}
+
+.bgcarnet{text-align: justify;
+    background-color: var(--fondblanc);
+padding: 10px;}
+
+.bgliens{padding:15px;
+border:solid 1px var(--contour);
