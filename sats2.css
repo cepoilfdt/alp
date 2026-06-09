@@ -1,60 +1,38 @@
-.sujet-tabs {
- display: grid;
- grid-template-rows: repeat(2, max-content);
- grid-template-columns: repeat(30, minmax(min-content, auto));
- gap: 5px;
- margin: 0 auto;
+#fa_toolbar {display:none;}
 
- /* Ne pas retirer */
- & > br,
- input[name*="sujet-tab"] {display: none;}
-
- /* Onglet */
- label[for*="sujet-tab"] {
-   grid-row: 1;
-   display: block;
-   text-transform: uppercase;
-	 font-family:var(--font1);
-   color: #EB873B;
-   font-size: 12px;
-   padding: 2px 10px;
-   text-wrap: nowrap;
-   cursor: pointer;
-   top: 0;
-   transition: all 0.25s;
- }
-
- /* Onglet au survol */
- label[for*="sujet-tab"]:hover {
-   color: var(--contrast);
- }
-
- /* Onglet actif */
- input[name*="sujet-tab"]:checked + label[for*="sujet-tab"] {
-   background: #F7E8E1;
-	 border-bottom:solid 1px #E2C7D6;
-   color: #E19AAC;
-   transition: all 0.35s;
- }
-
-  /* Contenu d'un onglet */
- .sujet-tab-content {
-   grid-row: 2;
-   grid-column: 1 / -1;
-   z-index: 1;
-   opacity: 0;
-   transition: all 0.35s;
-   background: transparent;
-   padding: 10px;
- }
-
- /* Contenu d'un onglet actif */
- input[name*="sujet-tab"]:checked + label + .sujet-tab-content {
-  z-index: 2;
-  opacity: 1;
-  transition: all 0.35s;
- }
+.ican{font-size:10px;
+color:white;
+padding-left:5px;
 }
+
+span.coloradmin{color:var(--neutralDark);}
+
+#bookmark-popover .popover {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 65px;
+    padding: 15px 45px 15px 15px;
+    max-width: 100%;
+    width: 400px;
+    height: 400px;
+}
+
+.passport{background-size:cover;background-repeat: no-repeat;text-align:center;align-content:center;align-self: center;filter:grayscale(0%);width:500px;background-size:fit-content;}
+
+
+play{background-color: var(--s3);
+color:var(--s3t);
+padding:4px 15px;
+font-weight:lighter!important;
+font-size: 11px;
+font-family: inconsolata;
+border-bottom:solid 2px #D6D3B4;}
+
+.gridplay{display: grid;grid-template-columns: auto auto;grid-gap: 0px;text-align:left;align-items: start;width:480px;margin-top:15px;}
+.imgplay{background-size:cover;background-repeat: no-repeat;text-align:center;align-content:center;align-self: center;filter:grayscale(0%);width:230px;height:350px;}
+.playlist{background-color:var(--fondblanc);padding:10px 5px;width:250px;height:350px;overflow:auto;text-transform:inherit!important;}
+
 
 /* Conteneur de tous les messages d'un sujet */
 /* Cette class est ajouté par le script que si le sujet contient un élément <buton onglet=""> */
