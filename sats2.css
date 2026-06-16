@@ -1,4 +1,4 @@
-#fa_toolbar {display:none;}
+
 /*traduction*/
 .original {border-bottom: 2px dotted var(--pink);}
 .translate .original, .translate:hover .tslt {display: inline; }
