@@ -1,3 +1,16 @@
+#fa_toolbar{display:none!important}
+
+body .uwy #userwayAccessibilityIcon {
+bottom: 0px !important;
+    right: 5px !important;
+    left: auto !important;
+  top:600px;
+  width:30px;
+  height:30px;
+  }
+
+.uwy.userway_p1 .userway_buttons_wrapper{top:50px;}
+
 d8{font-family:var(--font1);
 text-transform:uppercase;
 font-size:10px;
@@ -161,22 +174,6 @@ psd2, s2, s2 a{font-size: 14px;
     padding-bottom: -2px;
 	margin-bottom:2px;
 	font-style:none!important;}
-
-.fichegrid{display: grid;
-  grid-template-columns: 50% 50%;
-  grid-gap: 1px;
-  align-content:justify;
-  text-align:justify;
-  padding:10px;
-  max-height:250px;
-  }
-
-.grid1{border-right: 1px solid #D1D1D1;
-padding-right:10px;overflow-y:auto;
-  overflow-x:hidden;}
-
-.grid2{padding-left:10px;overflow-y:auto;
-  overflow-x:hidden;}
 
 .ccontact{}
 
