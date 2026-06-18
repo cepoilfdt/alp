@@ -1,4 +1,3 @@
-#fa_share_text, #fa_twitter, #fa_gp, #fa_rss, #fa_fb, #fa_magnifier,#fa_mail, #notif_list li .contentText, ul#notif_list, #fa_notifications, #fa_search {display:none !important;}
 d8{font-family:var(--font1);
 text-transform:uppercase;
 font-size:10px;
@@ -170,13 +169,14 @@ psd2, s2, s2 a{font-size: 14px;
   text-align:justify;
   padding:10px;
   max-height:250px;
-  overflow-y:auto;
-  overflow-x:hidden;}
+  }
 
 .grid1{border-right: 1px solid #D1D1D1;
-padding-right:10px;}
+padding-right:10px;overflow-y:auto;
+  overflow-x:hidden;}
 
-.grid2{padding-left:10px;}
+.grid2{padding-left:10px;overflow-y:auto;
+  overflow-x:hidden;}
 
 .ccontact{}
 
