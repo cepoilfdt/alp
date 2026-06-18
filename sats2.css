@@ -1,3 +1,4 @@
+#fa_share_text, #fa_twitter, #fa_gp, #fa_rss, #fa_fb, #fa_magnifier,#fa_mail, #notif_list li .contentText, ul#notif_list, #fa_notifications, #fa_search {display:none !important;}
 
 /*traduction*/
 .original {border-bottom: 2px dotted var(--pink);}
